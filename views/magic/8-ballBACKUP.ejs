@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <style>
+      .btn{
+        /*appearance: button;*/
+        -moz-appearance: button;
+        -webkit-appearance: button;
+        text-decoration: none;
+        font: menu;
+        color: ButtonText;
+        display: inline-block;
+        padding: 2px 8px;
+      }
+      body {
+        text-align: center;
+      }
+      #ebContainer div{
+        text-align: center;
+      }
+      #eball {
+        display: inline-block;
+        position: relative;
+        background-image: url('/images/8ball.png');
+        background-size: 100%;
+        height: 450px;
+        width: 450px;
+        animation-duration: 0.7s;
+        animation-name: dbShake;
+      }
+      @keyframes dbShake {
+        10%, 90% {
+          transform: translate3d(-10px, 10px, 60px);
+        }
+
+        20%, 80% {
+          transform: translate3d(20px, -20px, -10px);
+        }
+
+        30%, 50%, 70% {
+          transform: translate3d(-40px, 20px, -60px);
+        }
+
+        40%, 60% {
+          transform: translate3d(40px, -10px, 10px);
+        }
+        /*10%, 90% {*/
+          /*transform: translate3d(-1px, 0, 0);*/
+        /*}*/
+
+        /*20%, 80% {*/
+          /*transform: translate3d(2px, 0, 0);*/
+        /*}*/
+
+        /*30%, 50%, 70% {*/
+          /*transform: translate3d(-4px, 0, 0);*/
+        /*}*/
+
+        /*40%, 60% {*/
+          /*transform: translate3d(4px, 0, 0);*/
+        /*}*/
+      }
+
+      #ebMsg {
+        display: block;
+        position: relative;
+        font-family: -apple-system;
+        text-align: center;
+        top: 210px;
+        left: 200px;
+        width: 50px;
+        color: whitesmoke;
+        animation-duration: 6s;
+        animation-name: msgReveal;
+        transition-timing-function: ease-out;
+      }
+
+      @keyframes msgReveal {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body bgcolor="<%= bg_color %>">
+    <h1><%= title %></h1>
+    <h1></h1>
+  <p><%= tone %></p>
+  <a class="btn" href="/magic/8-ball/">Ask again</a>
+    <div id="ebContainer">
+    <div id="eball"><div id="ebMsg"><%= msg %></div></div></div>
+  <script>
+    window.onload = function() {
+      document.querySelector("#ebMsg").style
+    }
+  </script>
+  </body>
+</html>

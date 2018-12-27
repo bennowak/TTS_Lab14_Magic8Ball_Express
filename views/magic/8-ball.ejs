@@ -1,0 +1,13 @@
+<% layout('/layout') %>
+<% block('title', 'Magic 8-Ball') %>
+<% block('body_color', bg_color) %>
+<% block('page_style',  '#asdf{ color: "red"; }') %>
+<h1><%= title %></h1>
+<h1></h1>
+<p><%= tone %></p>
+<a href="/magic/8-ball/"><button>Ask again</button></a>
+<div id="ebContainer">
+    <div id="eball">
+        <div id="ebMsg"><%= msg %></div>
+    </div>
+</div>

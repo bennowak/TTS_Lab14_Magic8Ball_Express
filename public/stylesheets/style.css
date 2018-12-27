@@ -1,8 +1,9 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: rgba(247, 247, 247, 0.99); }
 
 a {
-  color: #00B7FF; }
+  color: rgba(87, 130, 120, 0.99); }
 
 /*# sourceMappingURL=style.css.map */

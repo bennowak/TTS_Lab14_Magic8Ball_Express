@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= block.title %></title>
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="/stylesheets/m8b.css" />
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body bgcolor='<%= (bg_color == undefined ? "blue" : bg_color) %>'>
+<%- partial('partials/navbar') %>
+<section class="container">
+    <%- body -%>
+</section>
+</body>
+</html>

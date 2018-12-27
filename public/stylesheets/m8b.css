@@ -1,0 +1,70 @@
+.btn{
+    /*appearance: button;*/
+    -moz-appearance: button;
+    -webkit-appearance: button;
+    text-decoration: none;
+    font: menu;
+    color: ButtonText;
+    display: inline-block;
+    padding: 2px 8px;
+}
+
+
+#ebContainer div{
+    text-align: center;
+}
+
+#eball {
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    background-image: url('/images/8ball.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 450px;
+    width: 450px;
+    animation-duration: 0.7s;
+    animation-name: dbShake;
+}
+
+#ebMsg {
+    display: block;
+    position: relative;
+    font-family: -apple-system;
+    text-align: center;
+    top: 200px;
+    left: 200px;
+    width: 50px;
+    color: whitesmoke;
+    animation-duration: 6s;
+    animation-name: msgReveal;
+    transition-timing-function: ease-out;
+}
+
+@keyframes dbShake {
+    10%, 90% {
+        transform: translate3d(-10px, 10px, 60px);
+    }
+
+    20%, 80% {
+        transform: translate3d(20px, -20px, -10px);
+    }
+
+    30%, 50%, 70% {
+        transform: translate3d(-40px, 20px, -60px);
+    }
+
+    40%, 60% {
+        transform: translate3d(40px, -10px, 10px);
+    }
+}
+
+@keyframes msgReveal {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100%;
+    }
+}

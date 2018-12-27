@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
-</html>
+<% layout('/layout') %>
+<% block('title', 'Express Partials Example') %>
+<% block('body_color', bg_color) %>
+<h1>My First Express 'BLOCK' layout</h1>
+<h2><%= msg %></h2>
