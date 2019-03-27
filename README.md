@@ -1,39 +1,4 @@
 # Lab 2018-12-26
-## MongoDB
-### Database Map
-![Basic Ticket object for TicketSystem MongoDB database](/public/images/db.png "A basic map of TicketSystem database.")
-### All records
-
-- `db.Tickets.find()` : All records
-
-### Queries
-Determining what records to perform specific actions on is at the heart of effective database usage and manipulation.  Basic query construction allows the developer to target records based on a wide array of concerns and requirements.  The following queries demonstrate some probable usages against the `TicketSystem.Tickets` collection.
-1. `db.Tickets.find({title:{$regex:'assignment'}})` : Shows documents whose `title` matches a regular expression.
-
-2. `db.Tickets.find({submitted_by: 1002})` : Search for ticket submitted by a particular user.
-
-3. `db.Tickets.find({open_date: {$lt:"2018-12-25"}})` : find tickets submitted before a specific date
-
-4. `db.Tickets.find({open_date: {$gt:"2018-12-25"}, status: "closed"})` : Find all tickets that were opened after a particular date, whose status is closed.
-
-5. `db.Tickets.find({assigned_to: 1002, status: "open"})` : show open tickets for a particular assignee
-
-6. `db.Tickets.find({notes: {$size: 0}})` : Find tickets that have no notes attached to them.
-
-7. `db.Tickets.find({status: "open"})` : Find all tickets whose status is open.
-
-8. `db.Tickets.find({category: "internal", status: "open"})` : find all tickets with a category of `internal` and a status of `open`.
-
-9. `db.Tickets.find({category: { $in: [ "protected", "personal"] }})` : Find documents whose category matches an entry in the `$in:` array
-
-10. `db.Tickets.find({category: { $in: [ "protected", "internal"] }, assigned_to: 1001})` : Find documents that match a list of categories and are assigned to a particular team member
-
-### Updates
-Selectively performing updates is a very important skill.  The following updates demonstrate some probable usages against the `TicketSystem.Tickets` collection.
-1. `db.Tickets.updateOne({id: 5}, {$set : {status: "open", close_date: null}})` : Update fields `status` and `close_date` for ticket `id:5` to reopen the ticket.
-
-1. `db.Tickets.updateMany({status: "open"}, {$set : {assigned_to: 1001}})` : Assign all open tickets to a single team member.
-
 ## Magic 8 Ball
 ### Logic/Data Considerations
 - To minimize on duplicate data, I chose a simple JSON object structure to encapsulate the complete set of potential states for the magic 8-ball. The top level of the object is an array of objects.  Each object element in the array has the following attributes
