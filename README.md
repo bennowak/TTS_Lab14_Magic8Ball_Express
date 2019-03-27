@@ -1,6 +1,5 @@
-# Lab 2018-12-26
-## Magic 8 Ball
-### Logic/Data Considerations
+# Magic 8 Ball
+## Logic/Data Considerations
 - To minimize on duplicate data, I chose a simple JSON object structure to encapsulate the complete set of potential states for the magic 8-ball. The top level of the object is an array of objects.  Each object element in the array has the following attributes
     - tone: A string that indicates a tone of "positive", "neutral", or "negative"
     - color: A string that corresponds to the color of the tone.
